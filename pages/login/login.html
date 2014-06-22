@@ -1,0 +1,59 @@
+﻿<!doctype HTML> 
+<html> 
+    <head> 
+        <title>Login</title> 
+        
+        <script src="/pages/login/login.js"></script>
+    </head> 
+    <body> 
+        <!-- BEGINSETTINGFLYOUT --> 
+        <div id="loginFlyout" data-win-control="WinJS.UI.SettingsFlyout" aria-label="Account" data-win-options="{settingsCommandId:'account',width:'normal'}"> 
+            <!-- Use either 'win-ui-light' or 'win-ui-dark' depending on the contrast between the header title and background color --> 
+            <div id="loginFlyoutInner" class="win-ui-light win-header" style="background-color:#000000"> <!-- Background color reflects app's personality --> 
+               <button type="button" class="win-backbutton" onclick="WinJS.UI.SettingsFlyout.show();" style="border-color:white; color:white;"></button> 
+               <div class="win-label" style="color:white">Account</div> 
+               <img src="/logos/smalllogo.png" style="position: absolute; right: 40px;"/> 
+            </div>                 
+            <div class="win-content "> 
+                <div class="win-settings-section">
+                    <input id="changeAccountButton" type="submit" value="Change Account" style="background-color:#000000" /> 
+                    <form id="loginForm">
+                        <p id="loginError" style="display:none; color:red;"></p>
+                        <h3 id="loginFormTitle">Please enter your <span class="replaceSiteName"></span> credentials to log in to <span class="replaceAppTitle"></span></h3>
+                        <br />
+                        <div>
+                            <label>
+                                API Key:
+                                <input type="text" id="apiKey" name="apiKey" />
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                API Secret:
+                                <input type="password" id="apiSecret" name="apiSecret" />
+                            </label>
+                        </div>
+                        <div>
+                            <input id="loginButton" type="submit" value="Log In" style="background-color: #000000" />
+                        </div>
+                        <br /><br />
+                        <div>
+                            <h3>New to Bitcoin, or just don't have a Coinbase account yet?</h3>
+                            <br />
+                            <input id="signupButton" type="button" value="Create a Free Account" style="border-width: 0px; color: white; background-color: #000000" />
+                        </div>
+                        <br /><br />
+                        <div>
+                            <h3>Tips:</h3>
+                            <br />
+                            <a class="tip" href="https://bitcointradr.uservoice.com/knowledgebase/articles/288816-finding-your-coinbase-api-key">
+                                Finding your Coinbase API Key
+                            </a>
+                        </div>
+                    </form>
+                </div> 
+            </div> 
+        </div> 
+        <!-- ENDSETTINGSFLYOUT --> 
+    </body> 
+</html> 

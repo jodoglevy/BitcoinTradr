@@ -1,0 +1,118 @@
+﻿html {
+    cursor: default;
+}
+
+#contenthost {
+    height: 100%;
+    width: 100%;
+}
+
+.fragment {
+    /* Define a grid with rows for a banner and a body */
+    -ms-grid-columns: 1fr;
+    -ms-grid-rows: 128px 1fr 0px;
+    display: -ms-grid;
+    height: 100%;
+    width: 100%;
+}
+
+    .fragment header[role=banner] {
+        /* Define a grid with columns for the back button and page title. */
+        -ms-grid-columns: 120px 1fr;
+        -ms-grid-rows: 1fr;
+        display: -ms-grid;
+        background-color: #000000;
+    }
+
+        .fragment header[role=banner] .win-backbutton {
+            margin-left: 39px;
+            margin-top: 59px;
+        }
+
+        .fragment header[role=banner] .titlearea {
+            -ms-grid-column: 2;
+            margin-top: 37px;
+        }
+
+            .fragment header[role=banner] .titlearea .pagetitle {
+                width: calc(100% - 20px);
+                color: white;
+            }
+            
+            .fragment header[role=banner] .titlearea .pagelogo {
+                width: 33px;
+            }
+
+    .fragment section[role=main] {
+        -ms-grid-row: 2;
+        height: 100%;
+        width: 100%;
+    }
+
+
+
+@media screen and (-ms-view-state: fullscreen-portrait) {
+    .fragment header[role=banner] {
+        -ms-grid-columns: 100px 1fr;
+    }
+
+        .fragment header[role=banner] .win-backbutton {
+            margin-left: 29px;
+        }
+}
+
+.win-selectioncheckmarkbackground {
+    /*??*/
+}
+
+/* app bar settings */
+
+.win-appbar {
+    background-color: #000000;
+    border-color:white;
+}
+
+.win-command {
+    border-color:white;
+    color: white;
+}
+
+.win-commandicon {
+    border-color:white;
+    color: white;
+}
+
+.win-commandimage {
+    border-color:white;
+    color: white;
+}
+
+hr.win-command {
+    background-color:white;
+}
+
+progress.withText
+{
+    color: white; /* Uses the same text color as the page */
+    vertical-align: text-bottom; /* Makes the bottom of the control align with the bottom of its label */
+}
+
+/* Text style for a label for the progress ring */
+.progressRingText
+{
+    font-family: "Segoe UI";
+    color: white;
+}
+
+/* Text style for a label for a default size progress ring */
+.progressRingText
+{
+    font-size: 11pt;
+    line-height: 15pt;
+}
+
+/* The margin to separate the ring and its label */
+.progressRingText progress
+{
+    margin-right: 5px;
+}

@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Landing Page</title>
+    
+    <link href="/pages/landing/landing.css" rel="stylesheet" />
+
+    <script src="/pages/landing/landing.js"></script>
+</head>
+<body>
+
+    <!-- The content that will be loaded and displayed. -->
+    <div class="fragment groupeditemspage">
+        <header aria-label="Header content" role="banner">
+            <h1 class="titlearea">
+                <img class="pagelogo" src="/logos/smalllogo.png" /> 
+                <span class="pagetitle"></span>
+                &nbsp;
+                <label id="mainProgressRing" class="progressRingText" style="display:none">
+                    <progress class="win-ring withText"></progress>
+                    <!-- Text goes here -->
+                </label>
+                <label id="errorText" class="progressRingText">
+                    <!-- Text goes here -->
+                </label>
+            </h1>
+        </header>
+        <section aria-label="Main content" role="main" style="padding-left: 5%;">
+            <div id="bigDisplay">
+                <br /><br />
+                <h2>Bitcoin Price: <span class="btcPrice"></span></h2>
+                <br /><br />
+                <h2>Account Balance: <span class="btcBalanceBTC"></span> ≈ <span class="btcBalanceCurrency"></span></h2>
+                <br /><br />
+                <h2>Recent Activity:</h2>
+                <br />
+                <div id="bigTransactionsTable">
+                    <table id="transactionsListBig" aria-label="List of transactions">
+                        <tr>
+                            <th>Date</th>
+                            <th>Description</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                        </tr>
+                    </table>
+                </div>
+                <br /><br />
+                <h3>Last updated <span class="currentTime"></span></h3>
+            </div>
+            <div id="littleDisplay">
+                <br />
+                <h2>Bitcoin Price:
+                <br />
+                <span class="btcPrice"></span></h2>
+                <br /><br />
+                <h2>Account Balance:
+                <br />
+                <span class="btcBalanceBTC"></span>
+                <br />≈ <span class="btcBalanceCurrency"></span></h2>
+                <br /><br />
+                <h2>Recent Activity:</h2>
+                <br />
+                <div id="littleTransactionsTable">
+                    <table id="transactionsListSmall" aria-label="List of transactions">
+                        <tr class="transactionTrSmall">
+                            <th>Date</th>
+                            <th>Action</th>
+                            <th>Amount</th>
+                            <th>Complete</th>
+                        </tr>
+                    </table>
+                </div>
+                <br />
+                <h3>Last updated <span class="currentTime"></span></h3>
+            </div>
+        </section>
+    </div>
+
+    <!-- Template code for AppBar --> 
+    <div id="appBar" data-win-control="WinJS.UI.AppBar"> 
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdRefresh',label:'Refresh',icon:'refresh',section:'selection',tooltip:'Refresh Data'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdBuy',label:'Buy Bitcoin',icon:'shop',section:'selection',tooltip:'Buy Bitcoin'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdSell',label:'Sell Bitcoin',icon:'openpane',section:'selection',tooltip:'Sell Bitcoin'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdSend',label:'Send Bitcoin',icon:'send',section:'selection',tooltip:'Send Bitcoin'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdDonate',label:'Donate',icon:'like',section:'selection',tooltip:'Donate to Bitcoin Tradr'}"></button>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+﻿<!doctype HTML> 
+<html> 
+    <head> 
+        <title>Cupid Hacks!</title> 
+        <script src="/DatingAppsShared/pages/addons/addons.js"></script>
+    </head> 
+    <body> 
+        <!-- BEGINSETTINGFLYOUT --> 
+        <div data-win-control="WinJS.UI.SettingsFlyout" aria-label="Cupid Hacks" data-win-options="{settingsCommandId:'addons',width:'normal'}"> 
+            <!-- Use either 'win-ui-light' or 'win-ui-dark' depending on the contrast between the header title and background color --> 
+            <div id="addonsFlyoutInner" class="win-ui-light win-header" style="background-color:#000000"> <!-- Background color reflects app's personality --> 
+               <button type="button" onclick="WinJS.UI.SettingsFlyout.show()" class="win-backbutton" style="border-color:white; color:white;"></button> 
+               <div class="win-label" style="color:white">Cupid Hacks!</div> 
+               <img src="/logos/smalllogo.png" style="position: absolute; right: 40px;"/> 
+            </div>                 
+            <div class="win-content "> 
+                <div id="addons" class="win-settings-section"> 
+                    
+                </div> 
+            </div> 
+        </div> 
+        <!-- ENDSETTINGSFLYOUT --> 
+    </body> 
+</html> 

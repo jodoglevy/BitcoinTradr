@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>MetroCupid</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.2.0/css/ui-light.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.2.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.2.0/js/ui.js"></script>
+
+    <!-- Project references -->
+    <link href="/css/default.css" rel="stylesheet" />
+
+    <script src="/js/lib/async/async.js"></script>    
+    <script src="/js/lib/underscore/underscore.js"></script>    
+    <script src="/js/lib/jquery/jquery-1.7.2.js"></script>
+    <script src="/js/lib/jsSHA/sha.js"></script>    
+
+    <script src="/js/model/coinbase.js"></script>
+
+    <script src="/js/system/appInfo.js"></script>
+
+    <script src="/js/controller/dataHandler.js"></script>
+    <script src="/js/controller/data.js"></script>
+
+    <script src="/js/system/default.js"></script>
+    <script src="/js/system/navigator.js"></script>
+    <script src="/js/system/extendedSplash.js"></script>
+    <script src="/js/system/imageCrop.js"></script>
+    <script src="/js/system/appOffers.js"></script>
+    <script src="/js/system/ads.js"></script>
+    <script src="/js/system/review.js"></script>
+    <script src="/js/system/notifier.js"></script>
+
+    <!-- Microsoft Advertising required references -->
+    <script src="/MSAdvertisingJS/ads/ad.js" ></script>
+    
+    <script src="/js/MarkedUp.js"></script>
+</head>
+<body>
+    <div id="extendedSplashScreen" style="width: 100%; height: 100%; background-color: #000000; z-index: 100;" class="extendedSplashScreen hidden"> 
+        <img id="extendedSplashImage" src="/logos/splashscreen.png" />  
+        <progress id="extendedSplashProgress" style="color: white;" class="win-medium win-ring"></progress> 
+    </div>
+    
+    <div id="bigImageHolder" style="width: 0%; height: 0%; background-color: black; z-index: 100;" onclick="profilePageUtils.enlargePhoto(false, this);">  
+        <img id="bigImage" src="/logos/splashscreen.png" style="display: block; margin-left: auto; padding-top:120px; margin-right: auto; height: 0%; width: 0%; background-color: black;" onclick="profilePageUtils.enlargePhoto(false, this);" />  
+    </div>  
+    
+    <div id="contenthost" data-win-control="Application.PageControlNavigator" data-win-options="{home: '/pages/landing/landing.html'}"></div>
+
+    <div id="fullViewAd" style="position: absolute; top: 20px; right: 10px; width: 728px; height: 90px; z-index: 1; display: none;"></div>
+    <div id="filledViewAd" style="position: absolute; top: 20px; left: 560px; width: 728px; height: 90px; z-index: 1; display: none;"></div>
+</body>
+</html>
